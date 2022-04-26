@@ -35,7 +35,6 @@ ALLOWED_HOSTS = ['127.0.0.1','flenzy.herokuapp.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'cloudinary_storage',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
