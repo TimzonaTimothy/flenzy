@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import cloudinary_storage
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -43,8 +45,7 @@ INSTALLED_APPS = [
     'store',
     'carts',
     'orders',
-    # 'cloudinary_storage',
-    # 'cloudinary',
+    'cloudinary',
     'admin_honeypot',
 ]
 
