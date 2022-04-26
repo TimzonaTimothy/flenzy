@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'carts',
     'orders',
     'cloudinary_storage',
-    'django.contrib.staticfiles',
     'cloudinary',
     'admin_honeypot',
 ]
