@@ -43,8 +43,8 @@ INSTALLED_APPS = [
     'store',
     'carts',
     'orders',
-    'cloudinary_storage',
-    'cloudinary',
+    # 'cloudinary_storage',
+    # 'cloudinary',
     'admin_honeypot',
 ]
 
