@@ -28,7 +28,7 @@ SECRET_KEY = 'on_728w$axqaqvcgx3o&&v27%9=59syj@(3q9eb*+*(1e4)g7u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','flenzy.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','flenz.herokuapp.com']
 
 
 # Application definition
