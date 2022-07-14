@@ -31,6 +31,19 @@
             </li> -->
             
           </ul>
+          <ul class="nav justify-content-center">
+            <form action="{% url 'search' %}" class="search" method="GET">
+                <div class="input-group w-100">
+                    <input type="text" class="form-control" style="width:60%;" placeholder="Search" name="keyword">
+                    
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="submit">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                </div>
+            </form>
+          </ul>
           <div style="color: white;" class="d-flex justify-content-end mb-3 mb-lg-0">
             {% if user.id is None %}
             <div class="widget-header">
@@ -54,17 +67,8 @@
                 <span class="badge badge-pill badge-danger notify">{{cart_count}}</span>
             </a><br> <br> -->
         </div> 
-          <form action="{% url 'search' %}" class="search" method="GET">
-            <div class="input-group w-100">
-                <input type="text" class="form-control" style="width:60%;" placeholder="Search" name="keyword">
-                
-                <div class="input-group-append">
-                  <button class="btn btn-primary" type="submit">
-                    <i class="fa fa-search"></i>
-                  </button>
-                </div>
-            </div>
-        </form>
+        
+          
         <a style="align-items: center;" href="{% url 'cart' %}" class="widget-header pl-3 ml-3">
             <div style="color: white;" class="icon icon-sm rounded-circle border"><i style="color: white;" class="fa fa-shopping-cart"></i></div>
             <span class="badge badge-pill badge-danger notify">{{cart_count}}</span>
