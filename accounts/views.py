@@ -37,18 +37,18 @@ def register(request):
 
 
             #user_activation
-            current_site = get_current_site(request)
-            mail_subject = 'Please activate your account'
-            message = render_to_string('accounts/account_verification_email.html', {
-                'user' : user,
-                'domain' : current_site,
-                'uid' : urlsafe_base64_encode(force_bytes(user.pk)),
-                'token' : default_token_generator.make_token(user)
-            })
-            to_email = email
-            send_email = EmailMessage(mail_subject, message, to=[to_email])
-            send_email.send()
-            # messages.success(request, 'Thank you for registrating with us. We have sent you a verification email to your email address. Please verify it.')
+#             current_site = get_current_site(request)
+#             mail_subject = 'Please activate your account'
+#             message = render_to_string('accounts/account_verification_email.html', {
+#                 'user' : user,
+#                 'domain' : current_site,
+#                 'uid' : urlsafe_base64_encode(force_bytes(user.pk)),
+#                 'token' : default_token_generator.make_token(user)
+#             })
+#             to_email = email
+#             send_email = EmailMessage(mail_subject, message, to=[to_email])
+#             send_email.send()
+            messages.success(request, 'Thank you for registrating with us.')
             return redirect('/accounts/login/?command=verification&email='+email)
 
     else:
